@@ -14,7 +14,7 @@ export default function StickyNavbar() {
   }, []);
 
   const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-8">
+    <ul className="mt-2 mb-4 flex flex-col gap-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-8 text-white">
       {['Home', 'About', 'Projects'].map((item) => (
         <Typography
           key={item}
@@ -32,7 +32,7 @@ export default function StickyNavbar() {
 
   return (
     <div>
-      <Navbar className="sticky top-0 z-10 h-max max-w-full px-4 py-2 lg:px-8 lg:py-4 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900">
+      <Navbar className="sticky top-0 z-10 h-max max-w-full px-4 py-2 lg:px-8 lg:py-4" style={{background: 'linear-gradient(90deg, rgba(8, 20, 29, 1) 0%, rgba(15, 25, 35, 1) 50%, rgba(8, 20, 29, 1) 100%)'}}>
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
             as="a"
@@ -51,7 +51,6 @@ export default function StickyNavbar() {
             </Button>
           </div>
 
-          {/* Hamburger Menu */}
           <IconButton
             variant="text"
             className="ml-auto h-6 w-6 text-inherit lg:hidden cursor-pointer"
@@ -62,8 +61,7 @@ export default function StickyNavbar() {
         </div>
       </Navbar>
 
-      {/* Drawer */}
-      <div className={`fixed top-0 right-0 z-20 h-full w-80 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isPanelOpen ? "translate-x-0" : "translate-x-full"}`}>
+      <div className={`fixed top-0 right-0 z-20 h-full w-77 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isPanelOpen ? "translate-x-0" : "translate-x-full"}`}>
         <Card className="p-6 h-full rounded-none">
           <div className="flex justify-between items-center mb-4">
             <Typography variant="h5">Let's Connect</Typography>
@@ -74,7 +72,7 @@ export default function StickyNavbar() {
               You can reach me via Email, LinkedIn or Phone.
             </Typography>
             <ul className="space-y-2 list-disc list-inside">
-              <li>Email: darkbawa77@gmail.com</li>
+              <li>Email : Darkbawa77@gmail.com</li>
               <li>
                 LinkedIn:{" "}
                 <a href="https://www.linkedin.com/in/bhupesh-kumar-46530424a/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
@@ -87,7 +85,6 @@ export default function StickyNavbar() {
         </Card>
       </div>
 
-      {/* Backdrop */}
       {isPanelOpen && (
         <div
           className="fixed inset-0 z-10 bg-black bg-opacity-30 "

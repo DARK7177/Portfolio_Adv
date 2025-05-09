@@ -1,5 +1,4 @@
-
-export default {
+module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -8,6 +7,9 @@ export default {
     extend: {
       fontFamily: {
         slab: ['"Roboto Slab"', 'serif'],
+      },
+      backgroundImage: {
+        "hero-section": "url('/public/Background.png')",
       },
     },
   },

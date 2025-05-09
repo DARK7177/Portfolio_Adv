@@ -1,12 +1,10 @@
-import Navbar from './components/Navbar'; // fix path if needed
+import Header from './components/Header';
+import './App.css';
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <h1 className="text-4xl font-bold text-center mt-10 text-gray-800 dark:text-white">
-        Welcome to My Portfolio
-      </h1>
+    <div className='bg-img'>
+      <Header />
     </div>
   );
 }
