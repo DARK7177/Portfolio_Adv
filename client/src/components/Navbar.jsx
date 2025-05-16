@@ -27,21 +27,20 @@ export default function StickyNavbar() {
   const logoTextColor = theme === "dark" ? "text-white" : "text-gray-900";
 
   const navList = (
-    <ul className={`mt-2 mb-4 flex flex-col gap-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-8 ${navTextColor}`}>
+    <ul className={`flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-8 ${navTextColor} m-0 p-0`}>
       {["Home", "About", "Projects"].map((item) => (
-        <Typography
-          key={item}
-          as="li"
-          variant="small"
-          className="p-1 font-normal"
-          style={{ fontFamily: "Roboto Slab" }}
-        >
-          <a href="#" className="flex items-center">
+        <li key={item} className="list-none">
+          <a
+            href="#"
+            className={`text-sm font-normal px-2 py-1 flex items-center hover:underline transition-colors duration-200`}
+            style={{ fontFamily: "Roboto Slab" }}
+          >
             {item}
           </a>
-        </Typography>
+        </li>
       ))}
     </ul>
+
   );
 
   return (

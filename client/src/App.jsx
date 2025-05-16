@@ -8,7 +8,7 @@ function ThemedApp() {
 
   const backgroundStyle = {
     backgroundImage:
-      theme === 'dark' ? "url('/public/Background.png')" : "url('/public/Background_light.png')",
+      theme === 'dark' ? "url('/Background.png')" : "url('/Background_light.png')",
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
